@@ -3,7 +3,7 @@ from flask import Flask
 from models import setup_db
 from flask_cors import CORS
 
-def dymko():
+def dymko_fun():
     return "This page is created by dymko!!!"
 
 def create_app(test_config=None):
@@ -25,8 +25,8 @@ def create_app(test_config=None):
         return "Be cool, man, be coooool! You're almost a FSND grad!"
     
     @app.route('/dymko')
-    def be_cool():
-        text = dymko()
+    def be_dymko():
+        text = dymko_fun()
         return text
 
     return app
